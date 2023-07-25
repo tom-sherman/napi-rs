@@ -1,6 +1,7 @@
 import test from 'ava'
 
 import { receiveString } from '..'
+import { receiveString } from 'examples'
 
 test('Function message', (t) => {
   // @ts-expect-error

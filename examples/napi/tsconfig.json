@@ -7,6 +7,11 @@
     "target": "ES2018",
     "skipLibCheck": false,
     "noEmit": true
+    "baseUrl": ".",
+    "paths": {
+      "#index": ["./index.d.ts"]
+    }
   },
   "exclude": ["dist", "electron.js", "electron-renderer"]
+  "exclude": ["dist", "electron.js", "index.js", "index.wasi.mjs"]
 }

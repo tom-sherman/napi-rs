@@ -2,8 +2,9 @@
   "name": "@examples/napi",
   "private": true,
   "version": "0.0.0",
-  "main": "./index.node",
+  "main": "./index.js",
   "types": "./index.d.ts",
+  "type": "module",
   "scripts": {
     "build": "napi-raw build --no-js",
     "test": "ava"
@@ -32,5 +33,23 @@
       "TS_NODE_PROJECT": "../tsconfig.json"
     },
     "timeout": "10m"
+  },
+  "dependencies": {
+    "@emnapi/core": "0.34.0",
+    "@types/lodash": "^4.14.191",
+    "lodash": "^4.17.21",
+    "sinon": "^15.0.1"
+  },
+  "exports": {
+    ".": {
+      "require": "./index.js",
+      "import": "./index.wasi.mjs"
+    }
+  },
+  "imports": {
+    "#index": {
+      "require": "./index.js",
+      "import": "./index.wasi.mjs"
+    }
   }
 }
